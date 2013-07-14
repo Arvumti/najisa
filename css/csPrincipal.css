@@ -1,0 +1,408 @@
+    /*
+    1.- INICIO
+		1.1.- SLIDER
+    2.- EVENTOS
+    3.- NOSOTROS
+    4.- MAS
+    5.- CONTACTO
+	9.- IMPRESION
+    10.- GLOBAL
+    10.1.- SPRITE
+    */
+    /*------------------------------------- 1.-INICIO -------------------------------------*/
+	body
+	{
+		background:#eee;
+		color:#333;		
+		font:16px Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+		text-align:center;
+	}
+    
+    footer
+    {
+        border-top:1px solid rgba(0, 0, 0, 0.5);
+        border-bottom:1px solid rgba(0, 0, 0, 0.5);
+        height:5.2em;
+        margin-top:2em;
+        padding:0.5em 1em 0 1em;
+		position:relative;
+    }
+
+    footer p
+    {
+        font-size:0.7em;
+        margin:0;
+    }
+
+	nav
+	{
+		border:1px solid #222;
+		box-shadow:5px 5px 25px #000;
+		margin-bottom:0.8em;
+		padding:0.2em;
+		text-align:left;
+		transition: all 3s linear;
+	}
+	
+	nav a
+	{
+		color: #000;
+		font-size: 1.1em;
+		text-decoration:none;
+		text-shadow:3px 5px 10px #222;
+	}
+	
+	nav li
+	{
+		border-left:1px solid #222;
+		display:inline-block;
+		height:100%;
+		text-align:center;
+		vertical-align:top;
+		width:6.8em;
+	}
+	
+	nav li a, nav li span
+	{
+		display:block;
+		transition: all 1s ease;
+	}
+	
+	nav span
+	{
+		font-size: 0.7em;
+	}
+	
+	nav ul
+	{
+		height:2.5em;
+		margin:0;
+		padding:0 0.2em;
+	}
+	
+	nav ul li:hover a
+	{
+		color:#6343d9;
+		position:relative;
+		transform:scale(1.2);
+	}
+	
+    nav ul li:hover span
+	{
+		color:#6343d9;
+	}
+	
+    section#pnlWorkSpace
+    {
+        margin:0 1em 0 1em;
+    }
+
+    section#pnlWorkSpace p
+    {
+        text-align: justify;
+    }
+		/*------------------------------------- 1.1.-SLIDER -------------------------------------*/
+	.slider-wrapper 
+	{
+		margin: 1em auto; 
+		width: 90%;
+	}
+	/*------------------------------------- 2.-EVENTOS -------------------------------------*/
+    #pag_eventos
+    {
+        color:#202020;
+    }
+
+    #pag_eventos a
+    {
+        color:#202020;
+        font-weight:bold;
+        text-shadow:1px 1px 30px #888;
+        transition:color 1s linear;
+    }
+
+    #pag_eventos a:hover
+    {
+        color:#3D3DFF;
+    }
+
+	#pag_eventos article
+    {
+        margin: 1em auto;
+    }
+
+    #pag_eventos em
+    {
+        color:#222;
+        font-size:0.7em;
+    }
+
+    #pag_eventos h1
+    {
+        text-shadow:5px 5px 10px #888;
+    }
+
+    #pag_eventos img
+    {
+        border-radius:2em;
+        box-shadow:2px 5px 25px #000;
+        height:100px;
+        margin:0 1%;
+        width:20%;
+    }
+    
+    #pag_eventos p
+    {
+        height: 100px;
+        margin:0 1%;
+        text-align:justify;
+        width:70%;
+    }
+
+    #pag_eventos span
+    {
+        border-bottom:1px dotted #222;
+        display:block;
+        max-height:65%;
+        overflow: hidden;
+    }
+
+    #pag_eventos section
+    {
+        margin: 0 auto;
+        padding: 1em;
+        width: 90%;
+    }
+
+    #pag_eventos img, #pag_eventos p
+    {
+        display: inline-block;
+        vertical-align:top;
+    }
+    /*------------------------------------- 3.-NOSOTROS -------------------------------------*/
+    #pag_nosotros
+    {
+        width:100%;
+    }
+
+    #pag_nosotros h1
+    {
+        text-shadow:5px 5px 10px #888;
+    }
+
+    #pag_nosotros img
+    {
+        border-radius:1em;
+        box-shadow:2px 2px 30px #888;
+        width:20%;
+    }
+
+    #pag_nosotros span
+    {
+        margin:0 1%;
+        text-align:justify;
+        width:70%;
+    }
+
+    #pag_nosotros img, #pag_nosotros span
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+    /*------------------------------------- 4.-MAS ------------------------------------------*/
+    /*------------------------------------- 5.-CONTACTO -------------------------------------*/
+    /*------------------------------------- 9.-IMPRESION -------------------------------------*/
+    .printable
+    {
+        border:1px solid white;
+        width:300px;
+        height:200px;
+        display: none;
+    }
+    .printable .panel
+    {
+        width:145px;
+    }
+    .printable .panel
+    {
+        display: inline-block;
+    }
+    .printable .panel-articulos
+    {
+        /*border:1px solid blue;*/
+    }
+    /*------------------------------------- 10.-GLOBAL -------------------------------------*/
+	#load_content
+	{
+		overflow:hidden;
+	}
+	.sec-center
+	{
+		margin:0 auto;
+	}
+	
+    .btn-inline
+    {
+    position             :relative;
+    bottom               :5px;
+    }
+    
+    .pnlAlign
+    {
+    border-radius        : 10px;
+    padding              : 10px;
+    margin               : 0 auto;
+    margin-top           : 50px;
+    background-color     : rgb(255, 255, 255);
+    border               : 1px solid gray;
+    }
+    
+    .back-screen
+    {
+    position             :absolute;
+    top                  :0;
+    left                 :0;
+    width                :100%;
+    height               :100%;
+    background-color     :rgba(10, 10, 10, 0.7);
+    }
+    
+    .isHidden
+    {
+    display              :none;
+    }
+    
+    .isHiddenSp
+    {
+    display              :none !important;
+    }
+    
+    .bordered
+    {
+    border               :1px solid blue;
+    }
+    
+    .borderedHr, .borderedHr > *
+    {
+    border               :1px solid blue;
+    }
+	
+    .borderedSp, .borderedSp *
+    {
+    border               :1px solid blue;
+    }
+    
+    .space-lr
+    {
+    margin               : 0 10px;
+    }
+    
+    .space-rigth
+    {
+    margin-right         :10px;
+    }
+    
+    .space-left
+    {
+    margin-left          :10px;
+    }
+    
+    .under-bar
+    {
+    border-top           :1px solid black;
+    }
+    
+    .no-align
+    {
+    text-align           :left !important;
+    }
+    
+    .cpointer
+    {
+    cursor               :pointer;
+    }
+    
+    .clear
+    {
+        clear: both;
+    }
+
+    i[class^ ='icon']
+    {
+    cursor               :pointer;
+    }
+
+    /*.printable { display: none; }*/
+
+    @media print
+    {
+        .non-printable { display: none; }
+        .printable { display: block; }
+    }
+
+    /*------------------------------------- 10.1.-GLOBAL -------------------------------------*/
+	.isLoadding
+	{
+		margin:10% 0;
+	}
+	
+	.icon-footer
+	{
+		display:inline-block;
+		position:absolute;
+		top:-0.3em;
+		left:0;
+	}
+	
+	.icon-footer .sprite
+	{
+		cursor:pointer;
+		display:inline-block;
+		height:3em;
+		width:3em;
+	}
+	
+	.sprite-soc 
+	{
+		cursor:pointer;
+		display: inline-block;
+	}
+	.sprite-soc { background-image: url('../img/social-img.png'); background-color: transparent; background-repeat: no-repeat; }
+	.a-google-icon:hover { width: 32px; height: 32px; background-position: 0px 0px; }
+	.a-google-icon { width: 32px; height: 32px; background-position: -37px 0px; }
+	.a-pinterest-icon:hover { width: 32px; height: 32px; background-position: -74px 0px; }
+	.a-pinterest-icon { width: 32px; height: 32px; background-position: -111px 0px; }
+	.a-twitter-icon:hover { width: 32px; height: 32px; background-position: 0px -37px; }
+	.a-twitter-icon { width: 32px; height: 32px; background-position: -37px -37px; }
+	.a-youtube-icon:hover { width: 32px; height: 32px; background-position: -74px -37px; }
+	.a-youtube-icon { width: 32px; height: 32px; background-position: -111px -37px; }
+
+
+	
+	
+	.sprite { background-image: url('../img/social-icons.png'); background-color: transparent; background-repeat: no-repeat; }
+	.google-plus-icon { width: 48px; height: 48px; background-position: 0px -144px; }
+	.pinterest-icon { width: 48px; height: 48px; background-position: 0px -96px; }
+	.twitter-icon { width: 48px; height: 48px; background-position: 0px -48px; }
+	.youtube-icon { width: 48px; height: 48px; background-position: 0px 0px; }
+
+    .icon
+    {
+	cursor:pointer;
+        background: url("../img/social-icons.jpg") no-repeat;
+        border-radius:5em;
+        display: inline-block;
+        height: 2em;
+        width: 2em;
+    }
+
+    .icon-facebook {background-position:-5px -5px;}
+    .icon-facebook:hover {background-position:-5px -165px;}
+    .icon-twitter {background-position:-45px -5px;}
+    .icon-twitter:hover {background-position:-45px -165px;}
+    .icon-google {background-position:-85px -5px;}
+    .icon-google:hover {background-position:-85px -165px;}
+    .icon-linkedin {background-position:-125px -5px;}
+    .icon-linkedin:hover {background-position:-125px -165px;}
+    .icon-youtube {background-position:-325px -5px;}
+    .icon-youtube:hover {background-position:-325px -165px;}
