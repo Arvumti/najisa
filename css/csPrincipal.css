@@ -1,11 +1,10 @@
     /*
     1.- INICIO
 		1.1.- SLIDER
-    2.- EVENTOS
-    3.- NOSOTROS
-    4.- MAS
+    2.- NOSOTROS
+    3.- CLIENTES
+    4.- SERVICIOS
     5.- CONTACTO
-	9.- IMPRESION
     10.- GLOBAL
     10.1.- SPRITE
     */
@@ -18,26 +17,53 @@
 		text-align:center;
 	}
     
+    header #logo_empresa
+    {
+        height:100px;
+        width:80%;
+    }
+
     footer
     {
         border-top:1px solid rgba(0, 0, 0, 0.5);
         border-bottom:1px solid rgba(0, 0, 0, 0.5);
-        height:5.2em;
+        color:rgb(140, 5, 5);
+        font-size:0.7em;
         margin-top:2em;
+        text-shadow:3px 3px 25px #AAA;
         padding:0.5em 1em 0 1em;
 		position:relative;
     }
 
-    footer p
+    footer article
     {
-        font-size:0.7em;
-        margin:0;
+        display:inline-block;
+        margin:0 1%;
+        vertical-align: top;
+        width: 28%;
+    }
+    
+    footer i
+    {
+        font-size:1.5em;
+    }
+
+    footer article img
+    {
+        width: 50%;
+    }
+
+    footer #info_empresa span
+    {
+        display: block;
     }
 
 	nav
 	{
+        background-image: linear-gradient(to bottom, #CC9999, #990000);
 		border:1px solid #222;
 		box-shadow:5px 5px 25px #000;
+        color:#FFF;
 		margin-bottom:0.8em;
 		padding:0.2em;
 		text-align:left;
@@ -46,7 +72,7 @@
 	
 	nav a
 	{
-		color: #000;
+		color: #FFF;
 		font-size: 1.1em;
 		text-decoration:none;
 		text-shadow:3px 5px 10px #222;
@@ -59,7 +85,7 @@
 		height:100%;
 		text-align:center;
 		vertical-align:top;
-		width:6.8em;
+		width:7.8em;
 	}
 	
 	nav li a, nav li span
@@ -82,14 +108,15 @@
 	
 	nav ul li:hover a
 	{
-		color:#6343d9;
+		color:#DDD;/*#6343d9;*/
 		position:relative;
 		transform:scale(1.2);
 	}
 	
     nav ul li:hover span
 	{
-		color:#6343d9;
+		color:#DDD;
+        transform:scale(0.7);
 	}
 	
     section#pnlWorkSpace
@@ -107,166 +134,17 @@
 		margin: 1em auto; 
 		width: 90%;
 	}
-	/*------------------------------------- 2.-EVENTOS -------------------------------------*/
-    #pag_eventos
-    {
-        color:#202020;
-    }
-
-    #pag_eventos a
-    {
-        color:#202020;
-        font-weight:bold;
-        text-shadow:1px 1px 30px #888;
-        transition:color 1s linear;
-    }
-
-    #pag_eventos a:hover
-    {
-        color:#3D3DFF;
-    }
-
-	#pag_eventos article
-    {
-        margin: 1em auto;
-    }
-
-    #pag_eventos em
-    {
-        color:#222;
-        font-size:0.7em;
-    }
-
-    #pag_eventos h1
-    {
-        text-shadow:5px 5px 10px #888;
-    }
-
-    #pag_eventos img
-    {
-        border-radius:2em;
-        box-shadow:2px 5px 25px #000;
-        height:100px;
-        margin:0 1%;
-        width:20%;
-    }
+	/*------------------------------------- 2.-NOSOTROS -------------------------------------*/
     
-    #pag_eventos p
-    {
-        height: 100px;
-        margin:0 1%;
-        text-align:justify;
-        width:70%;
-    }
+    /*------------------------------------- 3.-CLIENTES -------------------------------------*/
 
-    #pag_eventos span
-    {
-        border-bottom:1px dotted #222;
-        display:block;
-        max-height:65%;
-        overflow: hidden;
-    }
-
-    #pag_eventos section
-    {
-        margin: 0 auto;
-        padding: 1em;
-        width: 90%;
-    }
-
-    #pag_eventos img, #pag_eventos p
-    {
-        display: inline-block;
-        vertical-align:top;
-    }
-    /*------------------------------------- 3.-NOSOTROS -------------------------------------*/
-    #pag_nosotros
-    {
-        width:100%;
-    }
-
-    #pag_nosotros h1
-    {
-        text-shadow:5px 5px 10px #888;
-    }
-
-    #pag_nosotros img
-    {
-        border-radius:1em;
-        box-shadow:2px 2px 30px #888;
-        width:20%;
-    }
-
-    #pag_nosotros span
-    {
-        margin:0 1%;
-        text-align:justify;
-        width:70%;
-    }
-
-    #pag_nosotros img, #pag_nosotros span
-    {
-        display: inline-block;
-        vertical-align: top;
-    }
-    /*------------------------------------- 4.-MAS ------------------------------------------*/
+    /*------------------------------------- 4.-SERVICIO ------------------------------------------*/
     /*------------------------------------- 5.-CONTACTO -------------------------------------*/
-    /*------------------------------------- 9.-IMPRESION -------------------------------------*/
-    .printable
-    {
-        border:1px solid white;
-        width:300px;
-        height:200px;
-        display: none;
-    }
-    .printable .panel
-    {
-        width:145px;
-    }
-    .printable .panel
-    {
-        display: inline-block;
-    }
-    .printable .panel-articulos
-    {
-        /*border:1px solid blue;*/
-    }
     /*------------------------------------- 10.-GLOBAL -------------------------------------*/
 	#load_content
 	{
 		overflow:hidden;
-	}
-	.sec-center
-	{
-		margin:0 auto;
-	}
-	
-    .btn-inline
-    {
-    position             :relative;
-    bottom               :5px;
-    }
-    
-    .pnlAlign
-    {
-    border-radius        : 10px;
-    padding              : 10px;
-    margin               : 0 auto;
-    margin-top           : 50px;
-    background-color     : rgb(255, 255, 255);
-    border               : 1px solid gray;
-    }
-    
-    .back-screen
-    {
-    position             :absolute;
-    top                  :0;
-    left                 :0;
-    width                :100%;
-    height               :100%;
-    background-color     :rgba(10, 10, 10, 0.7);
-    }
-    
+	}    
     .isHidden
     {
     display              :none;
@@ -275,116 +153,36 @@
     .isHiddenSp
     {
     display              :none !important;
-    }
-    
+    }    
     .bordered
     {
     border               :1px solid blue;
-    }
-    
+    }    
     .borderedHr, .borderedHr > *
     {
     border               :1px solid blue;
-    }
-	
+    }	
     .borderedSp, .borderedSp *
     {
     border               :1px solid blue;
     }
-    
-    .space-lr
-    {
-    margin               : 0 10px;
-    }
-    
-    .space-rigth
-    {
-    margin-right         :10px;
-    }
-    
-    .space-left
-    {
-    margin-left          :10px;
-    }
-    
-    .under-bar
-    {
-    border-top           :1px solid black;
-    }
-    
-    .no-align
-    {
-    text-align           :left !important;
-    }
-    
     .cpointer
     {
     cursor               :pointer;
-    }
-    
+    }    
     .clear
     {
         clear: both;
     }
-
     i[class^ ='icon']
     {
     cursor               :pointer;
     }
-
-    /*.printable { display: none; }*/
-
-    @media print
-    {
-        .non-printable { display: none; }
-        .printable { display: block; }
-    }
-
-    /*------------------------------------- 10.1.-GLOBAL -------------------------------------*/
+    /*------------------------------------- 10.1.-ICONOS -------------------------------------*/
 	.isLoadding
 	{
 		margin:10% 0;
 	}
-	
-	.icon-footer
-	{
-		display:inline-block;
-		position:absolute;
-		top:-0.3em;
-		left:0;
-	}
-	
-	.icon-footer .sprite
-	{
-		cursor:pointer;
-		display:inline-block;
-		height:3em;
-		width:3em;
-	}
-	
-	.sprite-soc 
-	{
-		cursor:pointer;
-		display: inline-block;
-	}
-	.sprite-soc { background-image: url('../img/social-img.png'); background-color: transparent; background-repeat: no-repeat; }
-	.a-google-icon:hover { width: 32px; height: 32px; background-position: 0px 0px; }
-	.a-google-icon { width: 32px; height: 32px; background-position: -37px 0px; }
-	.a-pinterest-icon:hover { width: 32px; height: 32px; background-position: -74px 0px; }
-	.a-pinterest-icon { width: 32px; height: 32px; background-position: -111px 0px; }
-	.a-twitter-icon:hover { width: 32px; height: 32px; background-position: 0px -37px; }
-	.a-twitter-icon { width: 32px; height: 32px; background-position: -37px -37px; }
-	.a-youtube-icon:hover { width: 32px; height: 32px; background-position: -74px -37px; }
-	.a-youtube-icon { width: 32px; height: 32px; background-position: -111px -37px; }
-
-
-	
-	
-	.sprite { background-image: url('../img/social-icons.png'); background-color: transparent; background-repeat: no-repeat; }
-	.google-plus-icon { width: 48px; height: 48px; background-position: 0px -144px; }
-	.pinterest-icon { width: 48px; height: 48px; background-position: 0px -96px; }
-	.twitter-icon { width: 48px; height: 48px; background-position: 0px -48px; }
-	.youtube-icon { width: 48px; height: 48px; background-position: 0px 0px; }
 
     .icon
     {

@@ -61,7 +61,7 @@ function inicio() {
 	app.Router = new app.RouterFn();
     Backbone.history.start();
 
-	load('nosotros.html');
+    $('#slider').nivoSlider();
 }
 
 function onAStart() {

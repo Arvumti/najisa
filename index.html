@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-ES">
 	<head>
 		<title>Principal</title>
 		<link rel="stylesheet" href="css/normalize.css" type="text/css"/>
 		<link rel="stylesheet" href="css/csPrincipal.css" type="text/css"/>
 		<!--SLIDER-->
-		<link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/themes/default/default.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
 		<!--SLIDER END-->
 		<!--[if lt IE 9]>
@@ -19,6 +19,10 @@
 		<script src="js/backbone-min.js" type="text/javascript"></script>
 		<script src="js/appPrincipal.js" type="text/javascript"></script>
 		
+		<!--FONTS-->
+		
+		<!--FONTS END-->
+
 		<!--
 		<script src="js/bootstrap.min.js" type="text/javascript"></script>		
 		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
@@ -26,54 +30,81 @@
 		-->
 	</head>
 	<body>
+		<header>
+			<img id="logo_empresa" src="img/logo.jpg"/>
+		</header>
 		<nav>
 			<ul>
 				<li>
-					<a id="inicio" href="#inicio">Inicio</a>
-					<span>:)</span>
+					<a id="inicio" href="index.html" class="menu-isActive">
+						Inicio
+						<span>Principal</span>
+					</a>					
 				</li>
 				<li>
-					<a href="#eventos">Eventos</a>
-					<span></span>
+					<a href="#nosotros">
+						Nosotros
+						<span>Quienes somos</span>
+					</a>					
 				</li>
 				<li>
-					<a href="#nosotros">Nosotros</a>
-					<span>Quienes somos</span>
+					<a href="#eventos">
+						Clientes
+						<span>Trabajos realizados</span>
+					</a>
 				</li>
 				<li>
-					<a href="#mas">Mas</a>
-					<span></span>
+					<a href="#mas">
+						Servicios
+						<span>La mejor calidad</span>
+					</a>					
 				</li>
 				<li>
-					<a href="#contacto">Concatanos</a>
-					<span></span>
+					<a href="#contacto">
+						Concatanos
+						<span>A su servicio</span>
+					</a>
 				</li>
 			</ul>
 		</nav>
 		
 		<section id="load_content" class="">
-			
+			<div class="slider-wrapper theme-default">
+				<div id="slider" class="nivoSlider">
+					<img src="img/slider/1.jpg" data-thumb="img/slider/1.jpg" alt="" title="#slider_1" data-transition="fade" />
+					<img src="img/slider/2.jpg" data-thumb="img/slider/2.jpg" alt="" title="#slider_2" data-transition="fade" />
+					<img src="img/slider/3.jpg" data-thumb="img/slider/3.jpg" alt="" title="#slider_3" data-transition="fade" />
+				</div>
+				<div id="slider_1" class="nivo-html-caption">
+					Soluciones inteligentes
+				</div>
+				<div id="slider_2" class="nivo-html-caption">
+					<span>Business and Technology</span>
+				</div>
+				<div id="slider_3" class="nivo-html-caption">
+					Desarrollo de sistemas
+				</div>
+			</div>
 		</section>
 
-		<footer>
-			<div class="icon-footer">
-				<i class="sprite google-plus-icon"></i>
-				<i class="sprite pinterest-icon"></i>
-				<i class="sprite twitter-icon"></i>
-				<i class="sprite youtube-icon"></i>
-			</div>
-			<p>direccion completa</p>
-			<p>direccion completa</p>
-			<p>direccion completa</p>
-			<i class="icon icon-facebook"></i>
-			<i class="icon icon-twitter"></i>
-			<i class="icon icon-google"></i>
-			<i class="icon icon-youtube"></i>
-			<br/>
-			<i class="sprite-soc a-pinterest-icon"></i>
-			<i class="sprite-soc a-twitter-icon"></i>
-			<i class="sprite-soc a-youtube-icon"></i>
-			<i class="sprite-soc a-google-icon "></i>
+		<footer>  
+			<article>
+		       	<p>Poweder By: <span>&copy; Arvum tecnologías de información 2013 </span></p>
+		        <a href="http://www.arvumti.com"><img src="img/arvum_logo.png" width="70" height="70" alt=" "/></a>
+	      	</article>
+		   	<article id="info_empresa">
+				<p>
+					Estamos ubicados en:<span>Volcan Popocatepetl No. 5952 Col. El Colli Urbano C.P. 45070.</span>
+										<span>Zapopan, Jal. (0133) 3797-4267, 1567-8119  Cel. 04433 1021-9142</span>
+										<span>Director General Ing. José Benedicto Bringas Pérez</span>
+										<span>&copy;Najisa S.A. de C.V. ZAPOPAN JALISCO MEXICO</span>
+				</p> 
+			</article>
+			<article>
+				<p>Tambi&eacute;n puedes seguirnos en las redes sociales.</p>
+		        <a href="http://www.facebook.com/Arvumti" target="_blank"><i class="icon icon-facebook"></i></a>
+		        <a href="http://www.youtube.com/" target="_blank"><i class="icon icon-youtube"></i></a>
+			</article>
 		</footer>
 	</body>
 </html>
