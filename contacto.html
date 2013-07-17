@@ -3,6 +3,8 @@
 	<head>
 		<title>Principal</title>
 		<link rel="stylesheet" href="css/normalize.css" type="text/css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css"/>
 		<link rel="stylesheet" href="css/csPrincipal.css" type="text/css"/>
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv"></script>
@@ -11,55 +13,58 @@
 				
 		<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
 		<style type="text/css">
-			#galeria-images, #galeria-preview, #galeria-images img
+			section button
+			{
+				display:block;
+				margin:1em auto;
+				width:20em;
+			}
+			section #contacto-info
+			{
+				text-align:right;
+				padding-top:0.5em;
+				width:6em;
+			}
+			section #contacto-info span
+			{
+				display:block;
+				margin-bottom:1.3em;
+			}
+			section #contacto-data
+			{
+				text-align:left;
+				width:30.5em;
+			}
+			section #contacto-info, section #contacto-data
 			{
 				display:inline-block;
 				vertical-align:top;
 			}
-			#galeria-images
-			{
-				width:40%;
-			}			
-			#galeria-images img
-			{
-				background-image:linear-gradient(to bottom, #CC9999, #990000);
-				border:1px solid #444;
-				border-radius:0.5em;
-				box-shadow:3px 3px 20px #222;
-				height:6em;
-				margin:1%;
-				padding:0.5em;
-				width:20%;
-			}			
-			#galeria-preview
-			{
-				width:50%;
-			}
-			#galeria-preview img
-			{
-				margin-top:1em;
-				width:90%;
-				height:25em;
-			}
-			#galeria-preview span
-			{
-				display:block;
-				font-size:1.5em;
-				font-weight:bold;
-				margin:0 auto;
-				text-align:left;
-				width:90%;
-			}
-			#galeria-preview p
-			{
-				margin:0.5em auto;
-				text-align:justify;
-				width:90%;
-			}
 			section
 			{
-				margin-top:1em;
-				width:100%;
+				background-image:linear-gradient(to bottom, #CC9999, #990000);
+				box-shadow:3px 3px 25px #333;
+				border:1px solid #333;
+				border-radius:0.7em;
+				color:#FFF;
+				margin:1em auto;
+				padding:1em;
+				text-shadow:3px 3px 25px #DDD;
+				width:40em;
+			}
+			section input, section select, section textarea
+			{
+				margin:0.2em 0;
+				width:33em;
+			}
+			section select
+			{
+				width:34em;
+			}
+			section textarea
+			{
+				margin-top:0.5em;
+				width:33em;
 			}
 		</style>
 		<script type="text/javascript">
@@ -90,7 +95,7 @@
 					</a>					
 				</li>
 				<li>
-					<a href="#clientes">
+					<a href="./galeria.html">
 						Clientes
 						<span>Trabajos realizados</span>
 					</a>
@@ -102,7 +107,7 @@
 					</a>					
 				</li>
 				<li>
-					<a href="./contacto.html">
+					<a href="#contacto">
 						Concatanos
 						<span>A su servicio</span>
 					</a>
@@ -111,32 +116,23 @@
 		</nav>
 
 		<section>
-			<div id="galeria-images">
-				<img src="./img/galeria/1.jpg"/>
-				<img src="./img/galeria/2.jpg"/>
-				<img src="./img/galeria/3.jpg"/>
-				<img src="./img/galeria/4.jpg"/>
-				<img src="./img/galeria/5.jpg"/>
-				<img src="./img/galeria/6.jpg"/>
-				<img src="./img/galeria/7.jpg"/>
-				<img src="./img/galeria/8.jpg"/>
-				<img src="./img/galeria/9.jpg"/>
-				<img src="./img/galeria/10.jpg"/>
-				<img src="./img/galeria/11.jpg"/>
-				<img src="./img/galeria/12.jpg"/>
-				<img src="./img/galeria/13.jpg"/>
+			<div id="contacto-info">
+				<span>Nombre:</span>
+				<span>E-mail:</span>
+				<span>Motivo:</span>
+				<span>Mensaje:</span>
 			</div>
-			<div id="galeria-preview">
-				<figure>
-					<figcaption>
-						<span>titulo</span>
-						<p>
-							desc asdfkjas dlkfj ansldjkfna skljdfn lajskdfn
-						</p>
-					</figcaption>
-					<img id="galeria-img-actual" src="./img/galeria/2.jpg"/>
-				</figure>
+			<div id="contacto-data">
+				<input type="text" id="txtNombre" placeholder="Nombre..." />
+				<input type="text" id="txtEmail" placeholder="E-mail..." />
+				<select id="cboMotivo">
+					<option>General</option>
+					<option>Presupuesto</option>
+					<option>Informe</option>
+				</select>
+				<textarea id="txaMensaje"></textarea>
 			</div>
+			<button type="button" id="btnEnviar" class="btn btn-large">Enviar</button>
 		</section>
 	
 		<footer>  
