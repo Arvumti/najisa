@@ -61,7 +61,7 @@
 	nav
 	{
         /*background-image: linear-gradient(to bottom, #CC9999, #990000);*/
-		background: url("../img/back50.png") repeat-x;
+		background:#990000 url("../img/back50.jpg") repeat-x;
 		border:1px solid #222;
 		box-shadow:5px 5px 25px #000;
         color:#FFF;
