@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-ES">
 	<head>
 		<title>Principal</title>
@@ -27,6 +27,7 @@
 				border:1px solid #444;
 				border-radius:0.5em;
 				box-shadow:3px 3px 20px #222;
+				cursor:pointer;
 				height:6em;
 				margin:1%;
 				padding:0.5em;
@@ -35,11 +36,19 @@
 			#galeria-preview
 			{
 				width:50%;
+			}			
+			#galeria-preview figure div
+			{
+				margin:0 auto;
+				position:relative;
+				width:90%;
 			}
 			#galeria-preview img
 			{
+				left:0;
 				margin-top:1em;
-				width:90%;
+				position:absolute;
+				width:100%;
 				height:25em;
 			}
 			#galeria-preview span
@@ -64,10 +73,37 @@
 			}
 		</style>
 		<script type="text/javascript">
+			var infoClientes = {1:{'titulo':'Cultivos Naturales San Francisco', 'desc':'descripcion'},
+								2:{'titulo':'CISCSA', 							'desc':'descripcion'},
+								3:{'titulo':'Provimi', 							'desc':'descripcion'},
+								4:{'titulo':'Salud Natural', 					'desc':'descripcion'},
+								5:{'titulo':'Collins Division Veterinaria', 	'desc':'descripcion'},
+								6:{'titulo':'Laboratorios ULTRA', 				'desc':'descripcion'},
+								7:{'titulo':'Salud Animal Lapisa', 				'desc':'descripcion'},
+								8:{'titulo':'Collins', 							'desc':'descripcion'},
+								9:{'titulo':'Mega Healt', 						'desc':'descripcion'},
+								10:{'titulo':'Grupo Model S.A de C.V', 			'desc':'descripcion'},
+								11:{'titulo':'Coca-Cola', 						'desc':'descripcion'},
+								12:{'titulo':'Cargil', 							'desc':'descripcion'},
+								13:{'titulo':'Telcel', 							'desc':'descripcion'}
+								};
 			$(document).ready(function(){
 				$("#galeria-images img").click(function(e){
 					var dir = $(e.currentTarget).attr("src");
-					$("#galeria-img-actual").attr("src", dir);
+					
+					var act = $("img.isGalActive");
+					var sec = $("img.isGalInactive");
+					
+					if(act.attr("src") == dir)
+						return;
+					
+					var info = infoClientes[$(e.currentTarget).data("id")];					
+					$("#galeria-img1 span").text(info.titulo);
+					$("#galeria-img1 p").text(info.desc);
+					
+					act.removeClass().addClass("isGalInactive").fadeOut(function(){
+						sec.attr("src", dir).removeClass().addClass("isGalActive").fadeIn();
+					});
 				});
 			})
 		</script>
@@ -113,29 +149,32 @@
 
 		<section>
 			<div id="galeria-images">
-				<img src="./img/galeria/1.jpg"/>
-				<img src="./img/galeria/2.jpg"/>
-				<img src="./img/galeria/3.jpg"/>
-				<img src="./img/galeria/4.jpg"/>
-				<img src="./img/galeria/5.jpg"/>
-				<img src="./img/galeria/6.jpg"/>
-				<img src="./img/galeria/7.jpg"/>
-				<img src="./img/galeria/8.jpg"/>
-				<img src="./img/galeria/9.jpg"/>
-				<img src="./img/galeria/10.jpg"/>
-				<img src="./img/galeria/11.jpg"/>
-				<img src="./img/galeria/12.jpg"/>
-				<img src="./img/galeria/13.jpg"/>
+				<img src="./img/galeria/1.jpg" data-id="1" alt="Cultivos Naturales San Francisco"/>
+				<img src="./img/galeria/2.jpg" data-id="2" alt="CISCSA"/>
+				<img src="./img/galeria/3.jpg" data-id="3" alt="Provimi"/>
+				<img src="./img/galeria/4.jpg" data-id="4" alt="Salud Natural"/>
+				<img src="./img/galeria/5.jpg" data-id="5" alt="Collins Division Veterinaria"/>
+				<img src="./img/galeria/6.jpg" data-id="6" alt="Laboratorios ULTRA"/>
+				<img src="./img/galeria/7.jpg" data-id="7" alt="Salud Animal Lapisa"/>
+				<img src="./img/galeria/8.jpg" data-id="8" alt="Collins"/>
+				<img src="./img/galeria/9.jpg" data-id="9" alt="Mega Healt"/>
+				<img src="./img/galeria/10.jpg" data-id="10" alt="Grupo Model S.A de C.V"/>
+				<img src="./img/galeria/11.jpg" data-id="11" alt="Coca-Cola"/>
+				<img src="./img/galeria/12.jpg" data-id="12" alt="Cargil"/>
+				<img src="./img/galeria/13.jpg" data-id="13" alt="Telcel"/>
 			</div>
 			<div id="galeria-preview">
-				<figure>
+				<figure id="galeria-img1" class="isGalActive">
 					<figcaption>
-						<span>titulo</span>
+						<span>Cultivos Naturales San Francisco</span>
 						<p>
-							desc asdfkjas dlkfj ansldjkfna skljdfn lajskdfn
+							Descripción
 						</p>
 					</figcaption>
-					<img id="galeria-img-actual" src="./img/galeria/2.jpg"/>
+					<div>
+						<img src="./img/galeria/1.jpg" class="isGalActive" alt="Cultivos Naturales San Francisco"/>
+						<img src="./img/galeria/2.jpg" class="isGalInactive isHidden" alt="CISCSA"/>
+					</div>
 				</figure>
 			</div>
 		</section>
