@@ -1,5 +1,5 @@
 <?php
-	ini_set("SMTP","smtp.gmail.com");
+	/*ini_set("SMTP","ssl://smtp.gmail.com");
 	ini_set("smtp_port","587");
 	ini_set('sendmail_from', 'crlomes@gmail.com');
 	$seEnvio;      //Para determinar si se envio o no el correo
@@ -20,5 +20,29 @@
     if(mail($destinatario,$asunto,$cuerpomsg,$cabeceras))
         $seEnvio = true;
     else
-        $seEnvio = false;
+        $seEnvio = false;*/
+
+    include("class.phpmailer.php");
+    include("class.smtp.php"); 
+    $mail = new PHPMailer();
+    $mail->IsSMTP(); 
+    $mail->SMTPAuth = true;
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 465;
+    $mail->Password = "215321532";
+    $mail->Username = "crlomes@gmail.com";
+    $mail->SMTPSecure = "ssl";
+    
+    $mail->From = "crlomes@gmail.com"; 
+    $mail->FromName = "Nombre"; 
+    $mail->Subject = "Asunto del Email"; 
+    $mail->AltBody = "Este es un mensaje de prueba."; 
+    $mail->MsgHTML("<b>Este es un mensaje de prueba</b>."); 
+    $mail->AddAddress("crlomes@gmail.com", "Destinatario"); 
+    $mail->IsHTML(true); 
+    if(!$mail->Send()) { 
+    echo "Error: " . $mail->ErrorInfo; 
+    } else { 
+    echo "Mensaje enviado correctamente"; 
+    }
 ?>
