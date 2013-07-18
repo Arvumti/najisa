@@ -129,6 +129,84 @@
     {
         text-align: justify;
     }
+	/* Jesús*/
+	#Contenedor {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+	#Contenido{
+	background:#FBFBFB;
+	padding:20px;
+}
+
+#Main {
+}
+p {
+    line-height: 18px;
+}
+p.parrafo {
+	margin:30px 0;
+}
+.columnas {
+	margin-top:30px;
+}
+.columna{
+	float:left;
+	display:block;
+	margin-right:16px;
+    padding: 10px;
+}
+.columna.last {
+	margin-right:0;
+}
+.columnaUnMedio {
+	width:400px;
+}
+.columnaUnTercio {
+	width: 285px;
+}
+.columnaUnCuarto {
+	width:202px;
+}
+.columnaTresCuartos {
+	width: 680px;
+}
+
+.triangulito {
+	position:absolute;
+	width:20px;
+	height:13px;
+	background:url(../img/Triangulito.png) no-repeat;
+	bottom:-1px;
+	left:20px;
+	z-index:1;
+}
+.clear:after {
+	clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.muestra {
+	background:#FFF;
+	border-bottom:3px solid #CCC;
+}
+.slideMuestra {
+	border:1px solid #CCC;
+	position:relative;
+	margin-bottom: 10px;
+	z-index:0;
+}
+.lista li {
+	line-height:20px;
+}
+.lista li a{
+	border-bottom:1px solid #CCCCCC;
+}
+
+/* Jesús*/
 		/*------------------------------------- 1.1.-SLIDER -------------------------------------*/
 	.slider-wrapper 
 	{
