@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-ES">
 	<head>
 		<title>Principal</title>
@@ -13,6 +13,20 @@
 				
 		<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
 		<style type="text/css">
+			#loading
+			{
+				background-color:rgba(30, 30, 30, 0.5);
+				height:100%;
+				left:0;
+				position:absolute;
+				top:0;
+				width:100%;
+				z-index:999;
+			}
+			#loading img
+			{
+				margin-top:20%;
+			}
 			section button
 			{
 				display:block;
@@ -74,6 +88,51 @@
 					var dir = $(e.currentTarget).attr("src");
 					$("#galeria-img-actual").attr("src", dir);
 				});
+				
+				$("#btnEnviar").click(function(){
+					var nombre = $("#txtNombre").val();
+					var mail = $("#txtEmail").val();
+					var motivo = $("#cboMotivo").val();
+					var mensaje = $("#txaMensaje").val();
+					
+					if(nombre.length == 0 || mail.length == 0 || mensaje.length == 0) {
+						alert("Tiene que llenar todos los campos.");
+						return;
+					}
+					$("#loading").removeClass();
+					var valores = {};
+					valores["Nombre"] = $("#txtNombre").val();
+					valores["Email"] = $("#txtEmail").val();
+					valores["Motivo"] = $("#cboMotivo").val();
+					valores["Mensaje"] = $("#txaMensaje").val();
+					
+					$.ajax({
+						type: "POST",
+						url: "./mail.php",
+						cache: false,
+						dataType: 'html',
+						data: valores
+					})
+					.done(ajaxDone)
+					.error(ajaxError);
+					
+					function ajaxDone(data) {
+						$("#loading").addClass("isHidden");
+						if(data == 1) {
+							$("#txtNombre").val("");
+							$("#txtEmail").val("");
+							$("#txaMensaje").val("");
+							alert("Mensaje enviado");
+						}
+					}
+					
+					function ajaxError(err) {
+						$("#loading").addClass("isHidden");
+						console.log(err.responseText);
+						alert("Error al mandar el mensaje, intentelo mas tarde.");
+					}
+					
+				})
 			})
 		</script>
 	</head>
@@ -135,7 +194,10 @@
 			</div>
 			<button type="button" id="btnEnviar" class="btn btn-large">Enviar</button>
 		</section>
-	
+		<div id="loading" class="isHidden">
+			<img src="./img/loader.gif" />
+		</div>
+		
 		<footer>  
 			<article>
 		       	<p>Poweder By: <span>&copy; Arvum tecnologías de información 2013 </span></p>

@@ -1,48 +1,35 @@
 <?php
-	/*ini_set("SMTP","ssl://smtp.gmail.com");
-	ini_set("smtp_port","587");
-	ini_set('sendmail_from', 'crlomes@gmail.com');
-	$seEnvio;      //Para determinar si se envio o no el correo
-     $destinatario = 'crlomes@gmail.com';        //A quien se envia
-     $elmensaje = 'algo';
-     //Recupear el asunto
-     $asunto = 'asunto';
-     //Formatear un poco el texto que escribio el usuario (asunto) en la caja
-     //de comentario con ayuda de HTML
-     $cuerpomsg ='cuerpo';
-	//Establecer cabeceras para la funcion mail()
-    //version MIME
-    $cabeceras = "MIME-Version: 1.0\r\n";
-    //Tipo de info
-    $cabeceras .= "Content-type: text/html; charset=iso-8859-1\r\n";
-    //direccion del remitente
-    $cabeceras .= "From: crlomes@gmail.com <crlomes@gmail.com>";
-    if(mail($destinatario,$asunto,$cuerpomsg,$cabeceras))
-        $seEnvio = true;
-    else
-        $seEnvio = false;*/
-
     include("class.phpmailer.php");
     include("class.smtp.php"); 
+	
+	$user = "crlomes@gmail.com";
+	$pass = "b12321b12321";	
+	
+	$iNombre = $_POST["Nombre"];
+	$iEmail = $_POST["Email"];
+	$iMotivo = $_POST["Motivo"];
+	$iMensaje = $_POST["Mensaje"];
+	
     $mail = new PHPMailer();
     $mail->IsSMTP(); 
     $mail->SMTPAuth = true;
     $mail->Host = "smtp.gmail.com";
-    $mail->Port = 465;
-    $mail->Password = "215321532";
-    $mail->Username = "crlomes@gmail.com";
-    $mail->SMTPSecure = "ssl";
+    $mail->Port = 587;
+    $mail->Password = $pass;
+    $mail->Username = $user;
+    $mail->SMTPSecure = "tls";
     
-    $mail->From = "crlomes@gmail.com"; 
-    $mail->FromName = "Nombre"; 
-    $mail->Subject = "Asunto del Email"; 
-    $mail->AltBody = "Este es un mensaje de prueba."; 
-    $mail->MsgHTML("<b>Este es un mensaje de prueba</b>."); 
-    $mail->AddAddress("crlomes@gmail.com", "Destinatario"); 
+	$mail->SetFrom($iEmail, $iNombre);
+    $mail->From = $iEmail; 
+    $mail->FromName = $iNombre; 
+    $mail->Subject = $iMotivo; 
+    $mail->AltBody = $iMensaje; 
+    $mail->MsgHTML("<p>$iMensaje.</p>"); 
+    $mail->AddAddress($user, "Najisa"); 
     $mail->IsHTML(true); 
     if(!$mail->Send()) { 
-    echo "Error: " . $mail->ErrorInfo; 
+		echo "Error: " . $mail->ErrorInfo; 
     } else { 
-    echo "Mensaje enviado correctamente"; 
+		echo 1; 
     }
 ?>
