@@ -276,9 +276,9 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit; /* 1 */
+    font-family: 'Ubuntu Condensed', sans-serif; /*inherit*/ /* 1 */ /* Modificado por ARVUM */
     font-size: 100%; /* 2 */
-    margin: 0; /* 3 */
+   /* margin: 0; */ /* 3 */
 }
 
 /**
@@ -380,6 +380,7 @@ input::-moz-focus-inner {
 textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
+    margin-bottom: 15px;
 }
 
 /* ==========================================================================
