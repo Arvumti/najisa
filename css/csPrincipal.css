@@ -136,6 +136,68 @@
 		width: 90%;
 	}
 	/*------------------------------------- 2.-NOSOTROS -------------------------------------*/
+    h2,h3,h4{
+        font-family: 'Droid Sans', sans-serif;
+    }
+    p.parrafo,h5{
+        font-family: 'Anaheim', sans-serif;        
+        text-indent: 55px;
+    }
+    ul.letra{
+        font-family: 'Anaheim', sans-serif;
+        list-style: inherit;
+    }
+    .letra{
+        font-family: 'Anaheim', sans-serif;
+    }
+
+    .justify{
+        text-align: justify;
+    }
+
+    .containerMain {
+    width: 1000px;
+    box-shadow: 0px 0px 2px #333333;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    }
+
+    .columna{
+        float: left;
+        display: block;
+        margin: 0 auto;
+        margin-left: 35px;        
+    }
+
+ 
+    .columnaMedio{
+        width: 500px;        
+        display: block;
+    }
+
+    h4.alignLeft{
+        float: left;
+        margin-left: 25px;
+    }
+
+    h4.alignRight{
+        float: right;
+        margin-right: 25px;
+    }
+
+    .clearfix{
+        clear: both;
+        display: block;
+    }
+
+    ::selection{
+        background: #da3a3f;
+        color: #ffffff;
+    }
+
     
     /*------------------------------------- 3.-CLIENTES -------------------------------------*/
 
