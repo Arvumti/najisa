@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<title>Principal</title>
+		<link rel="stylesheet" href="css/normalize.css" type="text/css"/>
+		<link rel="stylesheet" href="css/csPrincipal.css" type="text/css"/>		
+		<link type="text/css" href="./css/left-without.css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv"></script>
+		<![endif]-->
+		
+		<script src="js/jquery-2.0.2.min.js" type="text/javascript" ></script>		
+        <script type="text/javascript" src="./js/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.pikachoose.min.js"></script>
+		<script language="javascript">
+			$(document).ready(function (){
+				$("#galeria_obras").PikaChoose({autoPlay:false, showCaption:false});
+				
+				$("#menu_obras li").click(function(e){
+					var rango = $(e.currentTarget).data("img");					
+					rango = rango.split("-");
+					
+					var lis = "";
+					for(var i = parseInt(rango[0]); i <= parseInt(rango[1]); i++) {
+						lis += "<li><img src='./img/galeria_obras/"+i+".png'/></li>";
+					}
+					
+					$("#galeria_titulo").text($(e.currentTarget).text());
+					$("#galeria_obras").html(lis).PikaChoose({autoPlay:false, showCaption:false}).data('pikachoose').Pause();
+				});
+			});
+		</script>
+		<style type="text/css">
+			#galeria_content
+			{
+				border-left:1px solid #990000;
+				margin:0 auto;
+				overflow:visible;
+				position:relative;
+				width:60em;
+			}
+			#galeria_content #galeria_titulo
+			{
+				border-bottom:1px solid #990000;
+				display:block;
+				font-size:2em;
+				margin:0.5em auto;
+				width:95%;
+			}
+			#main_content
+			{
+				padding-top:1em;
+				text-align:center;
+			}
+			#menu_obras
+			{
+				border-right:1px solid #990000;
+				border-top:1px solid #990000;
+				text-align:left;
+				width:30em;
+			}
+			#menu_obras ul
+			{
+				list-style:none;
+				margin:0;
+				padding:0.5em;
+			}
+			#menu_obras ul label
+			{
+				border-bottom:3px solid #990000;
+				display:block;
+				text-align:right;
+			}
+			#menu_obras ul li
+			{
+				border-bottom:1px solid #990000;
+				border-right:1px solid #990000;
+				cursor:pointer;
+				font-size:0.9em;
+				margin:1em 0;
+				text-align:left;
+			}
+			#menu_obras span
+			{
+				font-size:1.5em;
+			}
+			#menu_obras, #galeria_content
+			{
+				display:inline-block;
+				height:30em;
+				vertical-align:top;
+			}
+		</style>		
+		<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<img id="logo_empresa" src="img/logo.jpg"/>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a id="inicio" href="./index.html" class="menu-isActive">
+						Inicio
+						<span>Principal</span>
+					</a>					
+				</li>
+				<li>
+					<a href="#nosotros">
+						Nosotros
+						<span>Quienes somos</span>
+					</a>					
+				</li>
+				<li>
+					<a href="./galeria.html">
+						Clientes
+						<span>Trabajos realizados</span>
+					</a>
+				</li>
+				<li>
+					<a href="#mas">
+						Servicios
+						<span>La mejor calidad</span>
+					</a>					
+				</li>
+				<li>
+					<a href="#contacto">
+						Concatanos
+						<span>A su servicio</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<section id="main_content">
+			<aside id="menu_obras">
+				<span>Obras</span>
+				<ul>
+					<label>2012</label>
+					<li data-img="1-3">Proyecto de elevador industrial</li>
+					<li data-img="4-5">Punto de muestreo y mezanime de produccion</li>
+					<li data-img="6-11">Lines III alimento para aves Promivi-Cargill</li>
+					<label>2011</label>
+					<li data-img="12-14">Cuartos de manuales en Promivi-Cargill</li>
+					<li data-img="15-17">Muros de contencion y modificacion estructural a la nave principal proviminasa</li>
+					<li data-img="18-20">Modificacion en curtos limpios de laboratorios bionova</li>
+					<label>2010</label>
+					<li data-img="21-26">Laboratorios lapisa la piedad michoacan</li>
+					<li data-img="27-29">Almacen de producto terminado ultra laboratorios</li>
+					<li data-img="30-31">Rampas niveladoras y cortinas metalicas</li>
+				</ul>
+			</aside>
+			<div id="galeria_content" class="pikachoose">
+				<span id="galeria_titulo">Obra 1</span>
+				<ul id="galeria_obras">
+					<li>
+						<img src="./img/galeria_obras/1.png"/>
+					</li>
+					<li>
+						<img src="./img/galeria_obras/2.png"/>
+					</li>
+					<li>
+						<img src="./img/galeria_obras/3.png"/>
+					</li>
+				</ul>
+			</div>
+			<p class="clear"></p>
+		</section>
+		
+		<footer>  
+			<article>
+		       	<p>Poweder By: <span>&copy; Arvum tecnologías de información 2013 </span></p>
+		        <a href="http://www.arvumti.com"><img src="img/arvum_logo.png" width="70" height="70" alt=" "/></a>
+	      	</article>
+		   	<article id="info_empresa">
+				<p>
+					Estamos ubicados en:<span>Volcan Popocatepetl No. 5952 Col. El Colli Urbano C.P. 45070.</span>
+										<span>Zapopan, Jal. (0133) 3797-4267, 1567-8119  Cel. 04433 1021-9142</span>
+										<span>Director General Ing. José Benedicto Bringas Pérez</span>
+										<span>&copy;Najisa S.A. de C.V. ZAPOPAN JALISCO MEXICO</span>
+				</p> 
+			</article>
+			<article>
+				<p>Tambi&eacute;n puedes seguirnos en las redes sociales.</p>
+		        <a href="http://www.facebook.com/Arvumti" target="_blank"><i class="icon icon-facebook"></i></a>
+		        <a href="http://www.youtube.com/" target="_blank"><i class="icon icon-youtube"></i></a>
+			</article>
+		</footer>
+	</body>
+</html>
