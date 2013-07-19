@@ -9,7 +9,6 @@
     10.1.- SPRITE
     */
     /*------------------------------------- 1.-INICIO -------------------------------------*/
-	@import url('Reset.css');
 	body
 	{
 		background:#eee;
@@ -165,7 +164,7 @@ p.parrafo {
 	width:400px;
 }
 .columnaUnTercio {
-	width: 285px;
+	width: 250px;
 }
 .columnaUnCuarto {
 	width:202px;
