@@ -194,7 +194,7 @@ p.parrafo {
 	border-bottom:3px solid #CCC;
 }
 .slideMuestra {
-	border:1px solid #CCC;
+	border:2px solid #CCC;
 	position:relative;
 	margin-bottom: 10px;
 	z-index:0;
