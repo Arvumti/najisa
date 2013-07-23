@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="es-ES">
 	<head>
-		<title>Principal</title>
+		<title>NAJISA S.A. de C.V.</title>
+		<meta charset="UTF-8" />
+		<!-- Icono para la pestaña de la empresa -->
+		<link rel="shortcut icon" type="image/png" href="img/icono.png" />
+		<!-- -->
 		<link rel="stylesheet" href="css/normalize.css" type="text/css"/>
 		<link rel="stylesheet" href="css/csPrincipal.css" type="text/css"/>		
 		<link type="text/css" href="./css/left-without.css" rel="stylesheet" />
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<!-- Fonts End -->
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv"></script>
 		<![endif]-->
@@ -37,7 +46,8 @@
 				margin:0 auto;
 				overflow:visible;
 				position:relative;
-				width:60em;
+				/*width:60em;*/
+				width: 60%;
 			}
 			#galeria_content #galeria_titulo
 			{
@@ -95,7 +105,9 @@
 	</head>
 	<body>
 		<header>
-			<img id="logo_empresa" src="img/logo.jpg"/>
+			<center>
+				<img id="logo_empresa" src="img/logo.jpg"/>
+			</center>
 		</header>
 		<nav>
 			<ul>
@@ -131,66 +143,77 @@
 				</li>
 				<li>
 					<a href="./contacto.html">
-						Concatanos
+						Contáctanos
 						<span>A su servicio</span>
 					</a>
 				</li>
 			</ul>
 		</nav>
 
-		<section id="main_content">
-			<aside id="menu_obras">
-				<span>Obras</span>
-				<ul>
-					<label>2012</label>
-					<li data-img="1-3">Proyecto de elevador industrial</li>
-					<li data-img="4-5">Punto de muestreo y mezanime de produccion</li>
-					<li data-img="6-11">Lines III alimento para aves Promivi-Cargill</li>
-					<label>2011</label>
-					<li data-img="12-14">Cuartos de manuales en Promivi-Cargill</li>
-					<li data-img="15-17">Muros de contencion y modificacion estructural a la nave principal proviminasa</li>
-					<li data-img="18-20">Modificacion en curtos limpios de laboratorios bionova</li>
-					<label>2010</label>
-					<li data-img="21-26">Laboratorios lapisa la piedad michoacan</li>
-					<li data-img="27-29">Almacen de producto terminado ultra laboratorios</li>
-					<li data-img="30-31">Rampas niveladoras y cortinas metalicas</li>
-				</ul>
-			</aside>
-			<div id="galeria_content" class="pikachoose">
-				<span id="galeria_titulo">Obra 1</span>
-				<ul id="galeria_obras">
-					<li>
-						<img src="./img/galeria_obras/1.png"/>
-					</li>
-					<li>
-						<img src="./img/galeria_obras/2.png"/>
-					</li>
-					<li>
-						<img src="./img/galeria_obras/3.png"/>
-					</li>
-				</ul>
-			</div>
-			<p class="clear"></p>
-		</section>
-		
-		<footer>  
-			<article>
-		       	<p>Poweder By: <span>&copy; Arvum tecnologías de información 2013 </span></p>
-		        <a href="http://www.arvumti.com"><img src="img/arvum_logo.png" width="70" height="70" alt=" "/></a>
-	      	</article>
-		   	<article id="info_empresa">
-				<p>
-					Estamos ubicados en:<span>Volcan Popocatepetl No. 5952 Col. El Colli Urbano C.P. 45070.</span>
-										<span>Zapopan, Jal. (0133) 3797-4267, 1567-8119  Cel. 04433 1021-9142</span>
-										<span>Director General Ing. José Benedicto Bringas Pérez</span>
-										<span>&copy;Najisa S.A. de C.V. ZAPOPAN JALISCO MEXICO</span>
-				</p> 
-			</article>
-			<article>
-				<p>Tambi&eacute;n puedes seguirnos en las redes sociales.</p>
-		        <a href="http://www.facebook.com/Arvumti" target="_blank"><i class="icon icon-facebook"></i></a>
-		        <a href="http://www.youtube.com/" target="_blank"><i class="icon icon-youtube"></i></a>
-			</article>
-		</footer>
+		<center><h1>PORTAFOLIO DE NUESTRAS OBRAS</h1></center>
+			<section id="main_content">
+				<aside id="menu_obras">
+					<span>Obras</span>
+					<ul>
+						<label>2012</label>
+						<li data-img="1-3">Proyecto de elevador industrial</li>
+						<li data-img="4-5">Punto de muestreo y mezanime de produccion</li>
+						<li data-img="6-11">Lines III alimento para aves Promivi-Cargill</li>
+						<label>2011</label>
+						<li data-img="12-14">Cuartos de manuales en Promivi-Cargill</li>
+						<li data-img="15-17">Muros de contencion y modificacion estructural a la nave principal proviminasa</li>
+						<li data-img="18-20">Modificacion en curtos limpios de laboratorios bionova</li>
+						<label>2010</label>
+						<li data-img="21-26">Laboratorios lapisa la piedad michoacan</li>
+						<li data-img="27-29">Almacen de producto terminado ultra laboratorios</li>
+						<li data-img="30-31">Rampas niveladoras y cortinas metalicas</li>
+					</ul>
+				</aside>
+				<div id="galeria_content" class="pikachoose">
+					<span id="galeria_titulo">Obra 1</span>
+					<ul id="galeria_obras">
+						<li>
+							<img src="./img/galeria_obras/1.png"/>
+						</li>
+						<li>
+							<img src="./img/galeria_obras/2.png"/>
+						</li>
+						<li>
+							<img src="./img/galeria_obras/3.png"/>
+						</li>
+					</ul>
+				</div>
+				<p class="clear"></p>
+			</section>
+			
+			<footer>  
+				<article>
+			       	<center>
+				       	<p>Powered By: <span>&copy; Arvum tecnologías de información 2013 </span></p>
+				        <a href="http://www.arvumti.com" target="_blank"><img src="img/arvum_logo.png" width="70" height="70" alt=" "/></a>
+				    </center>
+		      	</article>
+			   	<article id="info_empresa">
+					<p>
+					<!--
+						Estamos ubicados en:<span>Volcan Popocatepetl No. 5952 Col. El Colli Urbano C.P. 45070.</span>
+					-->
+											<span>
+												Tel. (0133) 3797-4267, 1567-8119
+											</span>
+											<span>
+												Cel. 04433 1021-9142
+											</span>
+											<span>
+												&copy;NAJISA S.A. de C.V. ZAPOPAN JALISCO MEXICO
+											</span>
+					</p> 
+				</article>
+				<article>
+					<p>Tambi&eacute;n puedes seguirnos en las redes sociales.</p>
+			        <a href="http://www.facebook.com/Arvumti" target="_blank"><i class="icon icon-facebook"></i></a>
+			        <a href="http://www.youtube.com/" target="_blank"><i class="icon icon-youtube"></i></a>
+				</article>
+			</footer>
 	</body>
 </html>

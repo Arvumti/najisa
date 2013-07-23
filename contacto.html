@@ -1,11 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="es-ES">
 	<head>
-		<title>Principal</title>
+		<title>NAJISA S.A. de C.V.</title>
+		<!-- Icono para la pestaña de la empresa -->
+		<link rel="shortcut icon" type="image/png" href="img/icono.png" />
+		<!-- -->
 		<link rel="stylesheet" href="css/normalize.css" type="text/css"/>
-		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css"/>
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css"/>-->
 		<link rel="stylesheet" href="css/csPrincipal.css" type="text/css"/>
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<!-- Fonts End -->
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv"></script>
 		<![endif]-->
@@ -29,11 +37,13 @@
 			{
 				display:block;
 				margin:1em auto;
-				width:20em;
+				/*width:20em;*/
+				width: 20%;
+				height: 2em;
 			}
 			section #contacto-info
 			{
-				text-align:right;
+				/*text-align:right;*/
 				padding-top:0.5em;
 				width:6em;
 			}
@@ -55,29 +65,34 @@
 			section
 			{
 				/*background-image:linear-gradient(to bottom, #CC9999, #990000);*/
+				font-family: 'Ubuntu Condensed', sans-serif;
 				background:#990000 url("./img/back275.jpg") repeat-x;
 				box-shadow:3px 3px 25px #333;
 				border:1px solid #333;
 				border-radius:0.7em;
 				color:#FFF;
-				margin:1em auto;
+				margin:2em auto;
 				padding:1em;
 				text-shadow:3px 3px 25px #DDD;
 				width:40em;
 			}
 			section input, section select, section textarea
 			{
-				margin:0.2em 0;
+				/*margin:0.2em 0;*/
 				width:33em;
+				margin: 2% -4%;
+
 			}
 			section select
 			{
-				width:34em;
+				/*width:34em;*/
+				width: 20%;
 			}
 			section textarea
 			{
 				margin-top:0.5em;
 				width:33em;
+				height: 5em;
 			}
 		</style>
 		<script type="text/javascript" src="js/prefixfree.min.js"></script>
@@ -98,6 +113,7 @@
 						alert("Tiene que llenar todos los campos.");
 						return;
 					}
+
 					$("#loading").removeClass();
 					var valores = {};
 					valores["Nombre"] = $("#txtNombre").val();
@@ -137,7 +153,9 @@
 	</head>
 	<body>
 		<header>
-			<img id="logo_empresa" src="img/logo.jpg"/>
+			<center>
+				<img id="logo_empresa" src="img/logo.jpg"/>
+			</center>
 		</header>
 		<nav>
 			<ul>
@@ -172,8 +190,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						Concatanos
+					<a href="./contacto.html">
+						Contáctanos
 						<span>A su servicio</span>
 					</a>
 				</li>
@@ -202,15 +220,25 @@
 		
 		<footer>  
 			<article>
-		       	<p>Poweder By: <span>&copy; Arvum tecnologías de información 2013 </span></p>
-		        <a href="http://www.arvumti.com"><img src="img/arvum_logo.png" width="70" height="70" alt=" "/></a>
+		       	<center>
+			       	<p>Powered By: <span>&copy; Arvum tecnologías de información 2013 </span></p>
+			        <a href="http://www.arvumti.com" target="_blank"><img src="img/arvum_logo.png" width="70" height="70" alt=" "/></a>
+			    </center>
 	      	</article>
 		   	<article id="info_empresa">
 				<p>
+				<!--
 					Estamos ubicados en:<span>Volcan Popocatepetl No. 5952 Col. El Colli Urbano C.P. 45070.</span>
-										<span>Zapopan, Jal. (0133) 3797-4267, 1567-8119  Cel. 04433 1021-9142</span>
-										<span>Director General Ing. José Benedicto Bringas Pérez</span>
-										<span>&copy;Najisa S.A. de C.V. ZAPOPAN JALISCO MEXICO</span>
+				-->
+										<span>
+											Tel. (0133) 3797-4267, 1567-8119
+										</span>
+										<span>
+											Cel. 04433 1021-9142
+										</span>
+										<span>
+											&copy;NAJISA S.A. de C.V. ZAPOPAN JALISCO MEXICO
+										</span>
 				</p> 
 			</article>
 			<article>

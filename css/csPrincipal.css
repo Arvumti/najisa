@@ -11,16 +11,18 @@
     /*------------------------------------- 1.-INICIO -------------------------------------*/
 	body
 	{
-		background:#eee;
+		background:#fff;
 		color:#333;		
-		font:16px Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+		/*font:16px Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;*/
 		/*text-align:center;*/
 	}
     
     header #logo_empresa
     {
-        height:100px;
-        width:80%;
+        height:120px;
+        width:55%;
+        margin-bottom: 0.5%; 
+
     }
 
     footer
@@ -28,11 +30,12 @@
         border-top:1px solid rgba(0, 0, 0, 0.5);
         border-bottom:1px solid rgba(0, 0, 0, 0.5);
         color:rgb(140, 5, 5);
-        font-size:0.7em;
-        margin-top:2em;
+        font-size:0.75em;
+       /* margin-top:2em;*/
         text-shadow:3px 3px 25px #AAA;
         padding:0.5em 1em 0 1em;
 		position:relative;
+        background:#eee;               
     }
 
     footer article
@@ -41,6 +44,7 @@
         margin:0 1%;
         vertical-align: top;
         width: 28%;
+        font-family: 'Droid Sans', sans-serif;
     }
     
     footer i
@@ -103,8 +107,8 @@
 	nav ul
 	{
 		height:2.5em;
-		margin:0;
-		padding:0 0.2em;
+		margin:0 auto;
+		padding:0 0 0 18%; /*Para centrar NAV*/
 	}
 	
 	nav ul li:hover a
@@ -142,20 +146,34 @@
 
 #Main {
 }
+/*
 p {
     line-height: 18px;
 }
 p.parrafo {
 	margin:30px 0;
+}*/
+
+/*Se crea otro columnas para no chocar con otros class*/
+/*index.html en las partes de Servicios de Construcción, Nosotros
+trabajos realizados*/
+.columnasIn{
+    margin-top:30px;
+    margin-left: 10%;*/
+    margin: 0 auto;
+   /* width: 80%;*/
 }
+
 .columnas {
 	margin-top:30px;
+    margin-left: 6%;
+    /*margin-left: 6%; Revisar para ver cual está mejor */
 }
-.columna{
+.columnaI{
 	float:left;
 	display:block;
-	margin-right:16px;
-    padding: 10px;
+	margin-right:2%;
+    /*padding: 10px;*/
 }
 .columna.last {
 	margin-right:0;
@@ -194,8 +212,10 @@ p.parrafo {
 	border-bottom:3px solid #CCC;
 }
 .slideMuestra {
-	border:2px solid #CCC;
+	/*border:2px solid #CCC;*/
+    box-shadow: 0px 0px 2px #333333;
 	position:relative;
+    padding: 2%;
 	margin-bottom: 10px;
 	z-index:0;
 }
@@ -229,12 +249,16 @@ p.parrafo {
         font-family: 'Anaheim', sans-serif;
     }
 
+    .letraD{
+        font-family: 'Droid Sans', sans-serif;
+    }
+
     .justify{
         text-align: justify;
     }
 
     .containerMain {
-    width: 1000px;
+    width: 80%;
     box-shadow: 0px 0px 2px #333333;
     padding: 10px;
     margin: 0 auto;
@@ -245,12 +269,12 @@ p.parrafo {
 
     .columna{
         float: left;     
-        margin-left: 35px;             
+        margin-left: 2%;
+        margin-right: 2%             
     }
-
  
     .columnaMedio{
-        width: 480px;        
+        width: 45%;        
         
     }
 
