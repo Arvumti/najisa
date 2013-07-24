@@ -2,8 +2,8 @@
     include("class.phpmailer.php");
     include("class.smtp.php"); 
 	
-	$user = "crlomes@gmail.com";
-	$pass = "b12321b12321";	
+	$user = "arvumti@gmail.com";
+	$pass = "arvum2013";	
 	
 	$iNombre = $_POST["Nombre"];
 	$iEmail = $_POST["Email"];
