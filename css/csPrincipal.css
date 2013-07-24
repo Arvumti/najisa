@@ -110,7 +110,7 @@
 	{
 		height:2.5em;
 		margin:0 auto;
-		padding:0 0 0 18%; /*Para centrar NAV*/
+		text-align:center;
 	}
 	
 	nav ul li:hover a
