@@ -84,19 +84,51 @@
 			}
 		</style>
 		<script type="text/javascript">
-			var infoClientes = {1:{'titulo':'Cultivos Naturales San Francisco', 'desc':'descripcion'},
-								2:{'titulo':'CISCSA', 							'desc':'descripcion'},
-								3:{'titulo':'Provimi', 							'desc':'descripcion'},
-								4:{'titulo':'Salud Natural', 					'desc':'descripcion'},
-								5:{'titulo':'Collins Division Veterinaria', 	'desc':'descripcion'},
-								6:{'titulo':'Laboratorios ULTRA', 				'desc':'descripcion'},
-								7:{'titulo':'Salud Animal Lapisa', 				'desc':'descripcion'},
-								8:{'titulo':'Collins', 							'desc':'descripcion'},
-								9:{'titulo':'Mega Healt', 						'desc':'descripcion'},
-								10:{'titulo':'Grupo Model S.A de C.V', 			'desc':'descripcion'},
-								11:{'titulo':'Coca-Cola', 						'desc':'descripcion'},
-								12:{'titulo':'Cargil', 							'desc':'descripcion'},
-								13:{'titulo':'Telcel', 							'desc':'descripcion'}
+			var infoClientes = {1:{'titulo':'Cultivos Naturales San Francisco', 'desc': '•	ESTRUCTURA METALICA Y CUBIERTA PARA CUARTOS DE CULTIVO.<br/>'+ 
+																					   	'•	ESTRUCTURA GALVANIZADA Y LAMINACION EN AREA DE TUNELES.<br/>'+
+																					   	'•	HERRERIA DE INGRESO Y OFICINAS GENERALES.'},
+								2:{'titulo':'CISCSA', 							'desc': '•	OBRA CIVIL PARA CANALIZACION DE DUCTOS DE CABLEADO.'},
+
+								3:{'titulo':'Provimi', 							'desc': '•	MODIFICACION DE COMEDOR Y BAÑOS  DE PLANTA.<br/>'+ 
+																					   	'•	LINEA III.<br/>'+
+																						'•	PROYECTO Y EJECUCION DE OBRA DE ELEVADOR INDUSTRIAL.<br/>'+
+																						'•	PUNTO DE MUESTREO.<br/>'+
+																						'•	ESTRUCTURA METALICA Y OBRA CIVIL DE AMPLEACION DE LABORATORIO.<br/>'+
+																						'•	MUROS DE CONTENCION DE LIQUIDOS.<br/>'+
+																						'•	CUARTOS DE MANUALES.<br/>'+
+																						'•	CUARTOS DE RECIDUOS PELIGROSOS.<br/>'+
+																						'•	MODIFICACION DE ESTRUCTURA DE NAVE PRINCIPAL.<br/>'+
+																						'•	MAMPARAS METALICAS Y CAMBIO DE LAMINA TRASLUCIDA.'},
+
+								4:{'titulo':'Salud Natural', 					'desc': '•	MONTAJE Y ANCLAJE DE EQUIPOS.<br/>'+
+																						'•	BASES METALICAS PARA EQUIPOS DE AIRE.'},
+
+								5:{'titulo':'Collins Division Veterinaria', 	'desc':'•	ESTRUCTURA METALICA PARA CUARTOS DE PRODUCCION.<br/>'+
+																						'•	OBRA CIVIL PARA ADECUACION DE BODEGAS.<br/>'+
+																						'•	BASES PARA EQUIPOS  DE AIRE, PRODUCCION Y GAS.<br/>'+
+																						'•	PASOS DE GATO EN AZOTEAS DE BODEGA.'},
+
+								6:{'titulo':'Laboratorios ULTRA', 				'desc': '•	MODIFICACION DE CUARTOS LIMPIOS.<br/>'+
+																						'•	ESTRUCTURA METALICA, CUBIERTA Y OBRA CIVIL PARA  ALMACEN.<br/>'+
+																						'•	ESTRUCTURA METALICA, LOSACERO Y PANEL EN PLANTA BIONOVA.'},
+
+								7:{'titulo':'Salud Animal Lapisa', 				'desc': '•	ESTRUCTURA METALICA, CUBIERTA Y OBRA CIVIL DE PLANTA BIOLOGICOS.<br/>'+
+																						'•	RAMPAS NIVELADORAS.'},
+
+								8:{'titulo':'Collins', 							'desc': '•	ESTRUCTURAMETALICA Y CUBIERTA DE BODEGAS PALMIRA.'},
+
+								9:{'titulo':'Mega Healt', 						'desc': '•	ESTRUCTURA METALICA Y LOSACERO DE EDIFICIO CORPORATIVO.<br/>'+
+																						'•	ESTRUCTURA METALICA PARA FACHADA CIRCULAR DE CORPORATIVO.'},
+
+								10:{'titulo':'Grupo Model S.A de C.V', 			'desc': '•	IMPERMEABILIZACION DE OFICINAS ADMINISTRATIVAS.<br/>'+
+																						'•	OBRA CIVIL PARA CUARTOS ELECTRICOS.<br/>'+
+																						'•	ESTRUCTURA METALICA Y OBRA CIVIL DE ESTACIONAMIENTO DE AMACEN.'},
+
+								11:{'titulo':'Coca-Cola', 						'desc': '•	REPARACION DE PORTON ELECTRICO  DE INGRESO EN PLANTA LOPEZ MATEOS.'},
+
+								12:{'titulo':'Cargil', 							'desc': ''},
+
+								13:{'titulo':'Telcel', 							'desc': ''}
 								};
 			$(document).ready(function(){
 				$("#galeria-images img").click(function(e){
@@ -110,7 +142,7 @@
 					
 					var info = infoClientes[$(e.currentTarget).data("id")];					
 					$("#galeria-img1 span").text(info.titulo);
-					$("#galeria-img1 p").text(info.desc);
+					$("#galeria-img1 p").html(info.desc);
 					
 					act.removeClass().addClass("isGalInactive").fadeOut(function(){
 						sec.attr("src", dir).removeClass().addClass("isGalActive").fadeIn();
@@ -187,8 +219,9 @@
 					<figcaption>
 						<span>Cultivos Naturales San Francisco</span>
 						<p>
-
-							Descripción
+							•	ESTRUCTURA METALICA Y CUBIERTA PARA CUARTOS DE CULTIVO.<br/>
+						   	•	ESTRUCTURA GALVANIZADA Y LAMINACION EN AREA DE TUNELES.<br/>
+						   	•	HERRERIA DE INGRESO Y OFICINAS GENERALES.
 						</p>
 					</figcaption>
 					<div>
