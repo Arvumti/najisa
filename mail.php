@@ -2,8 +2,11 @@
     include("class.phpmailer.php");
     include("class.smtp.php"); 
 	
-	$user = "arvumti@gmail.com";
-	$pass = "arvum2013";	
+	/*$user = "arvumti@gmail.com";
+    $pass = "arvum2013";    */
+
+    $user = "jbringas@najisa.com";
+	$pass = "0116najisa";	
 	
 	$iNombre = $_POST["Nombre"];
 	$iEmail = $_POST["Email"];
@@ -13,8 +16,10 @@
     $mail = new PHPMailer();
     $mail->IsSMTP(); 
     $mail->SMTPAuth = true;
-    $mail->Host = "smtp.gmail.com";
-    $mail->Port = 587;
+    /*$mail->Host = "smtp.gmail.com";*/
+    $mail->Host = "smtp.najisa.com";
+    /*$mail->Port = 587;*/
+    $mail->Port = 26;
     $mail->Password = $pass;
     $mail->Username = $user;
     $mail->SMTPSecure = "tls";

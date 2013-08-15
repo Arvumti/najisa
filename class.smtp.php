@@ -48,7 +48,8 @@ class SMTP {
    *  SMTP server port
    *  @var int
    */
-  public $SMTP_PORT = 25;
+  /*public $SMTP_PORT = 25;*/ /*se modifica puerto de salida para najisa*/
+  public $SMTP_PORT = 26;
 
   /**
    *  SMTP reply line ending
