@@ -3,10 +3,10 @@
     include("class.smtp.php"); 
 	
 	/*$user = "arvumti@gmail.com";
-    $pass = "arvum2013";    */
+    $pass = "arvum2013";*/
 
     $user = "jbringas@najisa.com";
-	$pass = "0116najisa";	
+	$pass = "0116najisa";
 	
 	$iNombre = $_POST["Nombre"];
 	$iEmail = $_POST["Email"];
@@ -16,10 +16,10 @@
     $mail = new PHPMailer();
     $mail->IsSMTP(); 
     $mail->SMTPAuth = true;
-    /*$mail->Host = "smtp.gmail.com";*/
-    $mail->Host = "smtp.najisa.com";
-    /*$mail->Port = 587;*/
-    $mail->Port = 26;
+    /*$mail->Host = "smtp.gmail.com";
+	$mail->Port = 587;*/
+    $mail->Host = "mail.najisa.com";    
+    $mail->Port = 587;
     $mail->Password = $pass;
     $mail->Username = $user;
     $mail->SMTPSecure = "tls";
@@ -32,7 +32,7 @@
     $mail->MsgHTML("<p>$iMensaje.</p>"); 
     $mail->AddAddress($user, "Najisa"); 
     $mail->IsHTML(true); 
-    if(!$mail->Send()) { 
+	if(!$mail->Send()) { 
 		echo "Error: " . $mail->ErrorInfo; 
     } else { 
 		echo 1; 

@@ -41,6 +41,7 @@
 				height:100%;
 				left:0;
 				position:absolute;
+				text-align:center;
 				top:0;
 				width:100%;
 				z-index:999;
@@ -155,6 +156,8 @@
 							$("#txaMensaje").val("");
 							alert("Mensaje enviado");
 						}
+						else
+							alert(data);//"Los datos no son correctors, favor de verificarlos.");
 					}
 					
 					function ajaxError(err) {
@@ -233,7 +236,9 @@
 			</div>
 			<button type="button" id="btnEnviar" class="btn btn-large">Enviar</button>
 		</section>
-		
+		<div id="loading" class="isHidden">
+			<img src="./img/loader.gif"/>
+		</div>
 		<footer>  
 			<article>
 		       	<center>
