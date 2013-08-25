@@ -42,22 +42,27 @@
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>	
         <script type="text/javascript" src="./js/jquery.jcarousel.min.js"></script>
-		<script type="text/javascript" src="./js/jquery.pikachoose.min.js"></script>
 		<script language="javascript">
 			$(document).ready(function (){
-				$("#galeria_obras").PikaChoose({autoPlay:false, showCaption:false});
-				
 				$("#menu_obras li").click(function(e){
 					var rango = $(e.currentTarget).data("img");					
 					rango = rango.split("-");
 					
 					var lis = "";
+					var principal = "./img/galeria_obras/"+parseInt(rango[0])+".png";
 					for(var i = parseInt(rango[0]); i <= parseInt(rango[1]); i++) {
-						lis += "<li><img src='./img/galeria_obras/"+i+".png'/></li>";
+						lis += "<img class='galeria-item' src='./img/galeria_obras/"+i+".png'/> ";
 					}
 					
 					$("#galeria_titulo").text($(e.currentTarget).text());
-					$("#galeria_obras").html(lis).PikaChoose({autoPlay:false, showCaption:false}).data('pikachoose').Pause();
+					$(".galeria-items").html(lis);
+					$(".galeria-view").attr("src", principal);
+				});
+
+				$(".galeria-inicio").click();
+
+				$(".galeria-items").on("click", ".galeria-item", function(e) {
+					$(".galeria-view").attr("src", $(e.currentTarget).attr("src"));
 				});
 			});
 		</script>
@@ -83,6 +88,35 @@
 			#galeria_obras
 			{
 				height:20em;
+			}
+			#galeria_principal
+			{
+				margin:0 auto;
+				padding:1%;
+				width:90%;
+			}
+			#galeria_principal .galeria-items
+			{
+				padding:0.5em 1em;
+			}
+			#galeria_principal .galeria-items .galeria-item
+			{
+				background:#990000 url("./img/back50.jpg") repeat-x;
+				border-radius:5px;
+				padding:0.2em 0.3em;
+				height:5em;
+				width:5em;
+			}
+			#galeria_principal .galeria-view
+			{
+				height:25em;
+				margin:0 auto;
+				max-width:35em;
+				width: 100%;
+			}
+			#galeria_principal span
+			{
+				display:block;
 			}
 			#main_content
 			{
@@ -179,11 +213,12 @@
 
 		<center><h1>PORTAFOLIO DE NUESTRAS OBRAS</h1></center>
 			<section id="main_content">
+				
 				<aside id="menu_obras">
 					<span>OBRAS</span>
 					<ul>
 						<label>2013</label>
-						<li data-img="32-33">MODIFICACIÓN DE COMEDOR Y BAÑOS DE PLANTA.</li>
+						<li class="galeria-inicio" data-img="32-33">MODIFICACIÓN DE COMEDOR Y BAÑOS DE PLANTA.</li>
 						<li data-img="34-34">BARDA PERIMETRAL.</li>
 						<li data-img="35-38">LINEA III.</li>
 						<label>2012</label>
@@ -218,19 +253,16 @@
 						<li data-img="68-69">ESTRUCTURA GALVANIZADA Y LAMINACION EN ÁREA DE TÚNELES.</li>
 					</ul>
 				</aside>
-				<div id="galeria_content" class="pikachoose">
+				<div id="galeria_content">
 					<span id="galeria_titulo">OBRAS</span>
-					<ul id="galeria_obras">
-					<!--	<li>
-							<img src="./img/galeria_obras/1.png"/>
-						</li>
-						<li>
-							<img src="./img/galeria_obras/2.png"/>
-						</li>
-						<li>
-							<img src="./img/galeria_obras/3.png"/>
-						</li>-->
-					</ul>
+					<section id="galeria_principal">
+						<img class="galeria-view" src="./img/retro.jpg"/>
+						<article class="galeria-items">
+							<img class="galeria-item" src="./img/retro.jpg"/>
+							<img class="galeria-item" src="./img/retro.jpg"/>
+							<img class="galeria-item" src="./img/retro.jpg"/>
+						</article>
+					</section>
 				</div>
 				<p class="clear"></p>
 			</section>
